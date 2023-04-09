@@ -16,6 +16,10 @@ export default function TextForm(props) {
         // console.log('On changed')
         setText(event.target.value)
     }
+    const clearText=()=>{
+      console.log('Clear text has been clicked')
+      setText('')
+    }
   return (
     <>
     <div className="container mb-3">
@@ -24,6 +28,7 @@ export default function TextForm(props) {
     </div>
     <button className='btn btn-primary mx-1' onClick={handleUpClick}>Convert to Uppercase</button>
     <button className='btn btn-primary mx-1' onClick={handleLoClick}>Convert to Lowercase</button>
+    <button className='btn btn-primary mx-1' onClick={clearText}>Clear Text</button>
         <div className='container my-3'>
       <h1> Your Text Summary</h1>
       <p>{text.split(' ').length} words and {text.length} Characters</p>

@@ -24,8 +24,8 @@ export default function About() {
             setBtnText('Enable Light Mode')
         }
     }
-  return (
-            <div className='container'>
+  return (<>
+            <div className='container my-5'>
             <div className="accordion" id="accordionExample" >
         <div className="accordion-item">
             <h2 className="accordion-header">
@@ -61,5 +61,6 @@ export default function About() {
         <button type="button" className="btn btn-primary" onClick={toggleMode}>{btnText}</button>
         </div>
             </div>
+        </>
   )
 }
